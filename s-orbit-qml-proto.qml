@@ -2,15 +2,10 @@ import QtQuick 2.0
 
 Rectangle {
     id:root
-    Text {
-        anchors.centerIn: parent
-        text: "Hello World"
-
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                Qt.quit();
-            }
+    Item {
+        focus: true
+        Keys.onEscapePressed: {
+            Qt.quit()
         }
     }
 
